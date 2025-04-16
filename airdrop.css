@@ -63,9 +63,6 @@ html, body {
 }
 
 
-
-
-
 .row1 {
     display: flex;
     flex-direction: row;
@@ -73,21 +70,9 @@ html, body {
     justify-content: flex-start;
 }
 
-.row2 {
-    font-size: 2rem;
-    display: flex;
-    flex-direction: row; /* Ensures items are laid out in a row */
-    align-items: flex-start; /* Vertically aligns items to the center */
-    justify-content: space-evenly; /* Distributes items evenly with space between them */
-    min-width: 900px;
-    max-width: 900px; /* Ensures the container spans the full width */
-    gap: 50px; /* Adds space between items */
-    text-align: center; /* Ensures text inside elements is aligned to the left */
-}
-
 .logo {
-    width: 135px;
-    height: 135px;
+    width: 128px;
+    height: 128px;
 }
 
 .title {
@@ -95,9 +80,20 @@ html, body {
     text-align: left;
 }
 
+.row2 {
+    font-size: 2rem;
+    display: grid; /* Use grid layout for consistent alignment */
+    grid-template-columns: 135px 100px 1fr 1fr; /* Define column widths */
+    align-items: center; /* Vertically align items */
+    justify-items: start; /* Horizontally align items to the start */
+    min-width: 800px;
+    max-width: 900px;
+    gap: 10px; /* Adds space between columns */
+    
+}
+
 .symbol {
-    width: 135px;
-    text-align: left;
+    text-align: center;
 }
 
 .rank {
@@ -109,6 +105,6 @@ html, body {
 }
 
 .event {
-    text-align: right;
+    text-align: left; /* Aligns text to the left */
 }
 

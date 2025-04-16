@@ -63,13 +63,13 @@ async def render_page():
     output = template.render(df=df)
 
     # Save the output to an HTML file
-    with open("airdrop.html", "w", encoding="utf-8") as f:
+    with open("airdrop_output.html", "w", encoding="utf-8") as f:
         f.write(output)
 
     print("Rendered page saved as 'airdrop.html'.")
 
     # Use Playwright to convert the HTML file to an image
-    await generate_image_from_html("airdrop.html", 'airdrop.jpg')
+    await generate_image_from_html("airdrop_output.html", 'airdrop_output.jpg')
 
 if __name__=="__main__":
 
