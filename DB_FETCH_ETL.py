@@ -118,5 +118,6 @@ def fetch_and_push_airdrop_events():
     try:
         df_filtered.to_sql('NEWS_AIRDROPS_W', engine, if_exists='replace', index=False)
         logging.info("✅ Data successfully pushed to NEWS_AIRDROPS_W table.")
+        return df_filtered
     except Exception as e:
         logging.error(f"❌ An error occurred while writing to DB: {e}")

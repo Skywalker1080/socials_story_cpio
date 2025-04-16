@@ -62,15 +62,9 @@ html, body {
     gap: 10px;
 }
 
-.logo {
-    width: 135px;
-    height: 135px;
-}
 
-.title {
-    width: 100%;
-    text-align: left;
-}
+
+
 
 .row1 {
     display: flex;
@@ -84,14 +78,37 @@ html, body {
     display: flex;
     flex-direction: row; /* Ensures items are laid out in a row */
     align-items: flex-start; /* Vertically aligns items to the center */
-    justify-content: flex-start; /* Distributes items evenly with space between them */
-    min-width: 900;
-    max-width: 900; /* Ensures the container spans the full width */
+    justify-content: space-evenly; /* Distributes items evenly with space between them */
+    min-width: 900px;
+    max-width: 900px; /* Ensures the container spans the full width */
     gap: 50px; /* Adds space between items */
     text-align: center; /* Ensures text inside elements is aligned to the left */
 }
 
+.logo {
+    width: 135px;
+    height: 135px;
+}
+
+.title {
+    width: 100%;
+    text-align: left;
+}
+
 .symbol {
     width: 135px;
-    text-align: center;
+    text-align: left;
 }
+
+.rank {
+    text-align: left;
+}
+
+.name {
+    text-align: left;
+}
+
+.event {
+    text-align: right;
+}
+

@@ -9,17 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <div class="title">
+        <div class="title-main">
             <h1>Airdrop</h1>
         </div>
         <div class="main-body">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, incidunt ut distinctio dignissimos nobis alias animi quae eveniet illum, et atque, perferendis fugiat autem. Ab ducimus est inventore repellat facere?
-            Soluta adipisci possimus nihil iure eius doloribus voluptate quis dolores. Atque libero exercitationem maiores quas, hic blanditiis voluptatum sint totam et tempore impedit omnis nobis corporis laudantium, dolorem ea magnam?
-            Dicta harum neque dolores voluptates. Sunt, possimus. Qui inventore molestias, corporis numquam iusto, tempora quasi placeat est dolore earum ipsa a cupiditate quam vero voluptate iure pariatur laborum quo exercitationem!</p>
+            {% for data in df %}
+            <div class="frame">
+                <div class="row1">
+                    <img class="logo" src="{{data.logo}}">
+                    <h2 class="title">{{data.title}}</h2>
+                </div>
+                <div class="row2">
+                    <div class="symbol">{{data.symbol}}</div>
+                    <div class="rank">{{data.cmc_rank}}</div>
+                    <div class="name">{{data.slug}}</div>
+                    <div class="event">{{data.event_date}}</div>
+                </div>
+            </div>
+            {% endfor %}
         </div>
-    </div>
-    <div class="source">
-        Source: #placeholder.com
     </div>
 </body>
 </html>
