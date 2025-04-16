@@ -31,6 +31,8 @@ html, body {
 }
 
 .container {
+    position: absolute;
+    top: 450px;
     width: 100%;
     height: fit-content;
     display: flex;
