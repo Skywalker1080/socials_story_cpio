@@ -27,10 +27,12 @@ html, body {
     color: white; /* Matches the overall theme */
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 125px;
 }
 
 .container {
+    position: absolute;
+    top: 450px;
     width: 100%;
     height: fit-content;
     display: flex;
@@ -38,28 +40,11 @@ html, body {
     gap: 100px;
 }
 
-.title-main {
-    font-size: 2.5rem;
-    text-align: center;
-}
-
-.source {
-    position: absolute;
-    width: fit-content;
-    top: 1500px;
-    left: 860px;
-    transform: rotate(90deg); /* Rotates the element 90 degrees */
-    transform-origin: center; /* Sets the rotation point to the center of the element */
-    white-space: nowrap; /* Prevents text from breaking into the next line */
-    overflow: hidden; /* Optional: Hides any overflowing text */
-    font-size: 1.2rem;
-    color: white;
-}
-
 .frame {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border-bottom: 5px solid white; /* Adds a white border only at the bottom */
 }
 
 
@@ -78,6 +63,7 @@ html, body {
 .title {
     width: 100%;
     text-align: left;
+    margin: 0px;
 }
 
 .row2 {
@@ -94,18 +80,36 @@ html, body {
 
 .symbol {
     text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
 }
 
 .rank {
     text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
 }
 
 .name {
     text-align: left;
-    text-overflow: ellipsis;
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
 }
 
 .event {
-    text-align: left; /* Aligns text to the left */
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
 }
 
