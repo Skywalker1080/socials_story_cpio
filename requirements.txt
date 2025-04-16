@@ -1,0 +1,6 @@
+asyncio
+playwright
+pandas
+sqlalchemy
+jinja2
+instagrapi

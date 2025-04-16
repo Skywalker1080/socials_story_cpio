@@ -1,0 +1,54 @@
+html, body {
+    width: 1080px;
+    height: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: auto;
+    background-image: url('airdrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-body {
+    width: 80%; /* Set a definite width relative to the parent */
+    max-width: 900px; /* Optional: Limit the maximum width */
+    margin: 0 auto; /* Centers the element horizontally */
+    font-size: 1.5rem;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    text-align: center; /* Centers the text inside the element */
+    line-height: 1.5; /* Improves readability with proper line spacing */
+    color: white; /* Matches the overall theme */
+}
+
+.container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.title {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.source {
+    position: absolute;
+    width: fit-content;
+    top: 1500px;
+    left: 850px;
+    transform: rotate(90deg); /* Rotates the element 90 degrees */
+    transform-origin: center; /* Sets the rotation point to the center of the element */
+    white-space: nowrap; /* Prevents text from breaking into the next line */
+    overflow: hidden; /* Optional: Hides any overflowing text */
+    font-size: 1.2rem;
+    color: white;
+}
