@@ -6,7 +6,7 @@ import os
 from jinja2 import Environment, FileSystemLoader
 from instagrapi import Client
 from datetime import datetime
-from DB_FETCH_ETL import fetch_and_push_airdrop_events
+from DB_FETCH_ETL_AIRDROP import fetch_and_push_airdrop_events
 
 
 # Database connection configuration
