@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Airdrop</title>
+    <link rel="stylesheet" href="tokenomics.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-body">
+            {% for data in df %}
+            <div class="frame">
+                <div class="row1">
+                    <img class="logo" src="{{data.logo}}">
+                    <h2 class="title">{{data.title}}</h2>
+                </div>
+                <div class="row2">
+                    <div class="symbol">{{data.symbol}}</div>
+                    <div class="rank">{{data.cmc_rank_y}}</div>
+                    <div class="name">{{data.name_y}}</div>
+                    <div class="event">{{data.event_date}}</div>
+                </div>
+                <div class="news">
+                    <p>{{data.analysis}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>

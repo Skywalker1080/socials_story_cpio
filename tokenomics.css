@@ -1,0 +1,119 @@
+html, body {
+    width: 1080px;
+    height: 1920px;
+    margin: 0 auto;
+    padding: 0;
+    overflow: auto;
+    background-image: url('airdrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-body {
+    width: 80%; /* Set a definite width relative to the parent */
+    max-width: 900px; /* Optional: Limit the maximum width */
+    margin: 0 auto; /* Centers the element horizontally */
+    font-size: 1.5rem;
+    word-wrap: break-word; /* Ensures long words break to the next line */
+    text-align: center; /* Centers the text inside the element */
+    line-height: 1.5; /* Improves readability with proper line spacing */
+    color: white; /* Matches the overall theme */
+    display: flex;
+    flex-direction: column;
+    gap: 125px;
+}
+
+.container {
+    position: absolute;
+    top: 450px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 5px solid white; /* Adds a white border only at the bottom */
+}
+
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    justify-content: flex-start;
+}
+
+.logo {
+    width: 64px;
+    height: 64px;
+}
+
+.title {
+    width: 100%;
+    text-align: left;
+    margin: 0px;
+}
+
+.row2 {
+    font-size: 2rem;
+    display: grid; /* Use grid layout for consistent alignment */
+    grid-template-columns: 150px 150px 300px 200px; /* Define column widths */
+    align-items: center; /* Vertically align items */
+    justify-items: start; /* Horizontally align items to the start */
+    min-width: 800px;
+    max-width: 800px;
+    gap: 1px; /* Adds space between columns */
+    
+}
+
+.symbol {
+    text-align: center;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
+}
+
+.rank {
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
+}
+
+.name {
+    text-align: left;
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
+}
+
+.event {
+    text-align: left;
+    white-space: nowrap; /* Prevents text from wrapping */
+    overflow: hidden; /* Hides overflowing text */
+    text-overflow: ellipsis; /* Adds ellipsis (...) for overflow */
+    border-left: 1px solid white;
+    padding: 15px;
+}
+
+.news {
+    padding: 10px;
+    text-align: left;
+}

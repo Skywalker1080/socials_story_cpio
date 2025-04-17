@@ -1,6 +1,5 @@
-from DB_FETCH_ETL import fetch_and_push_airdrop_events
+from DB_FETCH_ETL_TOKENOMICS import fetch_tokenomics_news
 
-test = fetch_and_push_airdrop_events()
+test = fetch_tokenomics_news()
 
-#names = test['name']
 print(test.info())
