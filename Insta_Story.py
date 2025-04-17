@@ -41,7 +41,8 @@ print("✅ Session ready")
 # In GitHub Actions, you'll need to specify where images are stored
 # This could be in the repo or downloaded during the workflow
 image_paths = [
-    "./airdrop_output.jpg"  # Adjust path based on your GitHub Actions workflow structure
+    "./airdrop_output.jpg",
+    "./tokenomics_output.jpg"  # Adjust path based on your GitHub Actions workflow structure
 ]
 
 # Loop through the image paths and upload each as a story

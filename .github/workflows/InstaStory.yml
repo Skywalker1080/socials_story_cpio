@@ -23,7 +23,9 @@ jobs:
 
     - name: Run Instagram upload script
       run: python [FE]airdrop.py
-
+    
+    - name: Run Tokenomics script
+      run: python [FE]tokenomics.py
       
     - name: Run Instagram upload script
       env:
