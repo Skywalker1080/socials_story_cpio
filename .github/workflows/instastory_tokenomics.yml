@@ -1,0 +1,34 @@
+name: Instagram Story Tokenommics 
+
+on:
+  schedule:
+    - cron: "59 0 * * *"  # Daily at 00:30 UTC
+  workflow_dispatch: {}
+  
+jobs:
+  post_story:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        pip install together psycopg2 nest_asyncio requests pandas gspread oauth2client google-api-python-client google-auth-httplib2 google-auth-oauthlib instagrapi playwright python-dotenv pillow sqlalchemy jinja2 google-generativeai && playwright install chromium && playwright install firefox && playwright install webkit
+
+   
+    
+    - name: Run Tokenomics script
+      run: python [FE]tokenomics.py
+      
+    - name: Run Instagram upload script
+      env:
+        IG_USERNAME: ${{ secrets.IG_USERNAME }}
+        IG_PASSWORD: ${{ secrets.IG_PASSWORD }}
+        IG_SETTINGS_JSON: ${{ secrets.IG_SETTINGS_JSON }}
+      run: python Insta_Story.py
