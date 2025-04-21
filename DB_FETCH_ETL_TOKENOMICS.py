@@ -58,8 +58,7 @@ def fetch_tokenomics_news():
         "dateRangeEnd": str(next_week),
         "coins": "",
         "categories": "3",  # Tokenomics category
-        "sortBy": "influential_events",
-        "showOnly": "popular_events"
+        "sortBy": "influential_events"
     }
     
     headers = {
@@ -94,8 +93,11 @@ def fetch_tokenomics_news():
             df = df.drop(columns=['categories']).reset_index(drop=True)
             df = pd.concat([df, cats_df], axis=1)
         
+        print("📋 Columns in df:", df.columns.tolist())
+        print("🔍 Sample row:\n", df.head(1).T)
+
         # Filter for tokenomics category (id=3)
-        df_filtered = df[df['cat_id'] == 8]
+        df_filtered = df[df['cat_id'] == 3]
         
         # Select and rename columns
         columns_to_keep = ['coin_id', 'coin_name', 'coin_rank', 'coin_symbol', '-', 'displayed_date', 'source', 'proof']
