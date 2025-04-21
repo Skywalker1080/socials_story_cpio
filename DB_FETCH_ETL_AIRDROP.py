@@ -92,7 +92,7 @@ def fetch_and_push_airdrop_events():
         df = df.drop(columns=['categories']).reset_index(drop=True)
         df = pd.concat([df, cats_df], axis=1)
 
-    df_filtered = df[df['cat_id'] == 8]
+    df_filtered = df[df['cat_id'] == 3]
 
     columns_to_keep = ['coin_id', 'coin_rank', 'coin_symbol','-','displayed_date',  'source', 'proof']
     df_filtered = df_filtered[columns_to_keep]
