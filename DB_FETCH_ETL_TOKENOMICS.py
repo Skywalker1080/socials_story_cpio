@@ -95,7 +95,7 @@ def fetch_tokenomics_news():
             df = pd.concat([df, cats_df], axis=1)
         
         # Filter for tokenomics category (id=3)
-        df_filtered = df[df['cat_id'] == 3]
+        df_filtered = df[df['cat_id'] == 8]
         
         # Select and rename columns
         columns_to_keep = ['coin_id', 'coin_name', 'coin_rank', 'coin_symbol', '-', 'displayed_date', 'source', 'proof']
