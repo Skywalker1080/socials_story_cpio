@@ -50,6 +50,8 @@ async def generate_image_from_html(output_html_file, output_image_path):
 async def render_page():
     
     df_filtered = fetch_tokenomics_news()
+    df_filtered = df_filtered.tail(2)
+
     df = df_filtered.to_dict(orient='records')
 
     env = Environment(loader=FileSystemLoader('templates'))
