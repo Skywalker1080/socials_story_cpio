@@ -110,7 +110,11 @@ def fetch_and_push_airdrop_events():
     """
 
     cc_info = pd.read_sql_query(query, engine)
+    # Merge the data
     df_filtered = pd.merge(df_filtered, cc_info, on='slug', how='left')
+
+    # Filter rows where cmc_rank < 500
+    df_filtered = df_filtered[df_filtered['cmc_rank'] < 500]
 
     final_columns = ['cmc_rank', 'slug', 'symbol', 'title', 'event_date', 'proof', 'logo']
     df_filtered = df_filtered[final_columns]
